@@ -1,60 +1,33 @@
 # System Diagnostics
-### Making sense of the mess
 
-This repository contains patterns and playbooks for diagnosing when systems lose coherence over time:
-drift, competing intents, hidden coupling, and quiet failure.
+**Purpose:** Practical patterns, checklists, and playbooks for diagnosing when real systems lose coherence under operational load.
 
-It exists to help **map complexity back to structure**.
+This repo is part of the **ONE Glass Case**. It contains **inspection tools** (documents), not production code.
 
----
+- **Audience:** senior engineers, technical hiring managers, architects
+- **Status:** Active (content is intentionally compact and evidence-oriented)
+- **Last verified:** 2026-01-01
+- **Canonical hub:** `one-platform` (System Atlas)
 
-## 🧭 Diagnostic Lens
+## What this repo is
+A small, reusable toolkit for:
+- detecting *drift* (systems changing without the story changing)
+- spotting *competing intents* (multiple goals fighting in one surface)
+- mapping system structure so you can explain it without hand-waving
 
-Most system failures are not technical first.
-They are structural:
+## What this repo is not
+- Not an incident response runbook for a specific org
+- Not a monitoring/logging product
+- Not a philosophy of “coherence” — only concrete diagnostic patterns and steps
 
-- unclear intent,
-- too many workflows,
-- misaligned success criteria,
-- or missing invariants.
+## Contents
+- `playbooks/`
+  - `system_mapping_playbook.md` — how to reconstruct a system map from partial signals
+- `checklists/`
+  - `drift_checklist.md` — black‑and‑white drift detection checklist
+- `patterns/`
+  - `competing_intents.md` — how competing goals show up and how to separate them safely
 
-This repo focuses on finding those upstream causes.
-
----
-
-## 🗺️ System Mapping
-
-A simple mapping frame used here:
-
-1. Governing intent  
-2. Main workflows  
-3. Success criteria  
-4. Drift risks
-
-From this, structure emerges.
-
----
-
-## ⚠️ What is Drift?
-
-Drift happens when:
-- new workflows introduce new goals,
-- patches replace structure,
-- and no one revisits the system’s purpose.
-
-It’s slow. Quiet. And dangerous.
-
----
-
-## 📚 Contents
-
-- System Mapping Playbook
-- Drift checklists
-- Failure patterns
-- Diagnostic questions
-
----
-
-## 📊 Status
-
-Early lab. Playbooks forming.
+## Links
+- ONE System Atlas (hub): `../one-platform`
+- Case studies (Atlas): `../one-platform/case-studies/`
